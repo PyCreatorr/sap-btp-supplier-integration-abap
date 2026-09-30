@@ -1,0 +1,27 @@
+managed implementation in class zbp_i_tp_intorder unique;
+strict ( 2 );
+
+define behavior for ZI_TP_IntOrder alias PurchaseOrder
+persistent table ztp_int_order
+lock master
+authorization master ( none )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) OrderId;
+
+  mapping for ztp_int_order
+  {
+    OrderId = order_id;
+    Supplier = supplier;
+    Material = material;
+    Quantity = quantity;
+    DeliveryDate = delivery_date;
+    IntegrationStatus = integration_status;
+    SupplierOrderId = supplier_order_id;
+    confirmedDeliveryDate = confirmed_delivery_date;
+  }
+
+}

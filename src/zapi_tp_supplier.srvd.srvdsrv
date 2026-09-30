@@ -1,0 +1,4 @@
+@EndUserText.label: 'Supplier Integration OData API'
+define service ZAPI_TP_SUPPLIER {
+  expose ZC_TP_INTORDER as PurchaseOrders;
+}
