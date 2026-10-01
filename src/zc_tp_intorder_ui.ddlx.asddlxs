@@ -1,0 +1,51 @@
+@Metadata.layer: #CORE
+@UI: { 
+    headerInfo: { 
+        typeName: 'Purchase Order',
+        typeNamePlural: 'Purchase Orders',
+        title: { 
+            type: #STANDARD,
+            value: 'OrderId'
+        },
+        description: { 
+            value: 'Supplier'
+        }     
+    }
+}
+
+annotate entity ZC_TP_INTORDER
+    with 
+{
+    @UI.lineItem: [{ position: 10, importance: #HIGH, label: 'Order ID' }]
+    @UI.identification: [{ position: 10, label: 'Order ID'}]
+    OrderId;
+    
+    @UI.lineItem: [{ position: 20, label: 'Supplier' }]
+    @UI.selectionField: [{ position: 20 }]
+    Supplier;
+    
+    @UI.lineItem: [{ position: 30, label: 'Material' }]
+    Material;
+    
+    @UI.lineItem: [{ position: 40, label: 'Quantity' }]
+    Quantity;
+    
+    @UI.lineItem: [{ position: 50, importance: #HIGH, label: 'Delivery Date' }]
+    DeliveryDate;
+    
+    @UI.lineItem: [{ position: 60, importance: #HIGH, label: 'Integration Status' }]
+    @UI.identification: [{ position: 60, label: 'Integration Status' }]
+    @UI.selectionField: [{ position: 30 }]
+    IntegrationStatus;
+    
+    @UI.lineItem: [{ position: 70, importance: #HIGH, label: 'Supplier Order Id' }]
+    @UI.identification: [{ position: 70, label: 'Supplier Order Id' }]
+    SupplierOrderId;
+    
+    @UI.lineItem: [{ position: 80, importance: #MEDIUM, label: 'Confirmed Delivery Date' }]
+    @UI.identification: [{ position: 80, importance: #MEDIUM, label: 'Confirmed Delivery Date' }]
+    ConfirmedDeliveryDate;
+    
+    
+    
+}
