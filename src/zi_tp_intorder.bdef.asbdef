@@ -8,9 +8,12 @@ authorization master ( none )
 //etag master <field_name>
 {
   create ( authorization : global );
+  action dispatch result [1] $self;
+  static action resetDemo;
+  action changeMaterial parameter ZD_TP_CHANGE_MATERIAL result [1] $self;
   update;
   delete;
-  field ( readonly ) OrderId;
+  field ( mandatory : create, readonly : update ) OrderId;
 
   mapping for ztp_int_order
   {
@@ -21,7 +24,7 @@ authorization master ( none )
     DeliveryDate = delivery_date;
     IntegrationStatus = integration_status;
     SupplierOrderId = supplier_order_id;
-    confirmedDeliveryDate = confirmed_delivery_date;
+    ConfirmedDeliveryDate = confirmed_delivery_date;
   }
 
 }

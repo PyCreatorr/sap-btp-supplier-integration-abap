@@ -16,8 +16,10 @@
 annotate entity ZC_TP_INTORDER
     with 
 {
-    @UI.lineItem: [{ position: 10, importance: #HIGH, label: 'Order ID' }]
-    @UI.identification: [{ position: 10, label: 'Order ID'}]
+    @UI.lineItem: [{ position: 10, importance: #HIGH, label: 'Order ID' },
+                   { position: 90, type: #FOR_ACTION, dataAction: 'changeMaterial', label: 'Change Material' }]
+    @UI.identification: [{ position: 10, label: 'Order ID'}
+    ]
     OrderId;
     
     @UI.lineItem: [{ position: 20, label: 'Supplier' }]

@@ -1,5 +1,10 @@
-CLASS zbp_i_tp_intorder DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_tp_intorder.
+CLASS zbp_i_tp_intorder
+DEFINITION
+PUBLIC ABSTRACT FINAL
+FOR BEHAVIOR OF zi_tp_intorder.
+
 ENDCLASS.
 
 CLASS zbp_i_tp_intorder IMPLEMENTATION.
 ENDCLASS.
+

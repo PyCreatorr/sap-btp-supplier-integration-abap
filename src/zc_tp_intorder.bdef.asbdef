@@ -6,4 +6,8 @@ define behavior for ZC_TP_INTORDER alias PurchaseOrder
   use create;
   use update;
   use delete;
+
+  use action dispatch;
+  use action resetDemo;
+  use action changeMaterial;
 }
